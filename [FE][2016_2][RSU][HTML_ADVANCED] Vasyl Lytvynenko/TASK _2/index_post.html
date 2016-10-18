@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Second task(post)</title>
+	<style type="text/css">
+	form{line-height:25px;}
+	#sb{margin-top:10px;}
+	fieldset{width:300px;}
+	.field {clear:both; text-align:right;}
+	div .field label {float:left; padding-right:10px;}
+	.main {float:left}
+	#next{clear:both;}
+	#lb{float:left;line-height:50px; margin-right:3em;;}
+	</style>
+</head>
+<body>
+	<h1>Registration form</h1>
+	<form action="http://httpbin.org/post" method="post">
+		<fieldset>
+			<legend>Personal data</legend>
+				<div class="main">
+					<div class="field">
+						<label for="sn">Surname</label>
+						<input type="text" name="sn" id="sn" /><br />
+						<label for="fn">First name</label>
+						<input type="text" name="fn" id="fn" /><br />
+					</div>
+				</div>
+				<div id="next">
+					<div id="lb">
+						<label>Sex</label>
+					</div>
+						<input type="radio" name="sex" checked="checked" value='m' id="m" />
+						<label for="m">Male</label> <br />
+						<input type="radio" name="sex" value='f' id="f" />
+						<label for="f">Female</label><br />
+				</div>	
+		</fieldset>
+		<fieldset>
+			<legend>Contact information</legend>
+				<div class="main">
+					<div class="field">
+						<label for="st">Site</label>
+						<input type="url" name="st" id="st" /><br />
+						<label for="em">Email</label>
+						<input type="email" name="em" id="em" /><br />
+						<label for="phn">Phone</label>
+						<input type="tel" name="phn" id="phn" />	
+					</div>
+				</div>
+		</fieldset>					
+		<input type="submit" id="sb" value="Отправить">		
+	</form>
+</body>
+</html>
