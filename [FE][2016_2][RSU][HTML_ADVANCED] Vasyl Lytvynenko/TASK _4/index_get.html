@@ -4,14 +4,33 @@
 	<meta charset="UTF-8">
 	<title>Fourth task(get)</title>
 	<style type="text/css">
-	form{line-height:25px;}
-	.field {clear:both; text-align:left; float:left; padding-right:10px;}
-	.main {float:left;margin-bottom:1em;}
-	#sex{line-height:50px;}
-	#title{line-height:8em;}
-	#salary{line-height:3em;}	
-	.next{clear:both; margin-top:1em;}
-	#pswd{margin-top:0.5em;}
+	.main{clear:both; overflow:auto; position:relative; min-height:1.5em;}
+	.first{width:6em;min-height:1.5em;}
+	.first>*{vertical-align:middle;}
+	.second{margin-left:6em;}
+	.second>*{position: absolute;top: 50%;margin-top: -0.75em;}
+	
+	.firstth{width:6em;min-height:3em;overflow:auto; }
+		
+	.firstth>*{position: absolute;top: 50%;margin-top: -0.75em;width:6em;overflow:auto;}
+	/*if you added text and got more than one string in div with class "firstth>*", you have to comment out this rule*/
+	
+	.secondth{margin-left:6em;overflow:auto;}
+	.thirdth{position: absolute;top: 25%;margin-top: -0.75em;min-width:6em;}
+	/*if you added text and got more than one string in div with class "thirdth", you have to added 1.5em to min-height for each string in "firstth" rule*/
+	
+	.fourth{position: absolute;bottom: 25%;margin-bottom: -0.75em;min-width:6em	}
+	/*if you added text and got more than one string in div with class "fourth", you have to added 1.5em to min-height for each string in "firstth" rule*/
+	
+	.fifth{margin-left:6em;position: absolute;top: 50%;margin-top: -0.75em;min-width:10em}	
+	
+	.secondt{margin-left:6em;}
+	.firstt>*{position: absolute;top: 50%;margin-top: -0.75em;width:6em;}
+		/*if you added text and got more than one string in div with class "firstt", you have to added 1em to margin-top for each string in "firstt" rule*/
+	.mainq{clear:both; overflow:auto; position:relative; min-height:2em;}		
+	.secondq{margin-left:6em;}
+	.secondq>*{position: absolute;top: 50%;margin-top: -1em;}
+	#cap{margin-top:0.5em;margin-left:1em;}
 	</style>
 </head>
 <body>
@@ -19,26 +38,62 @@
 	<form action="http://httpbin.org/get">
 		<fieldset>
 			<legend>Personal data</legend>
-				<div class="field">
-					<label for="fn">First name</label><br />
-					<label for="mn">Middle name</label><br />
-					<label for="sn">Surname</label><br />
-					<label id="sex">Sex</label><br />
-					<label for="age" title="You must enter age from 18 to 101">Age</label><br />
-					<label for="cnt">Country of residence</label><br />
-					<label>City</label><br />
-					<label for="img">Photografy</label><br />
+			<div class="main">
+				<div class="first">
+					<label for="fn">First name</label>
 				</div>
-				<div class="main">
-					<input type="text" name="fn" id="fn" /><br />
-					<input type="text" name="mn" id="mn" /><br />
-					<input type="text" name="sn" id="sn" /><br />
-					<input type="radio" name="sex" checked="checked" value='m' id="m" />
-					<label for="m">Male</label> <br />
-					<input type="radio" name="sex" value='f' id="f" />
-					<label for="f">Female</label><br />
+				<div class="second">
+					<input  type="text" name="fn" id="fn" />
+				</div>
+			</div>
+			<div class="main">
+				<div class="first">
+					<label for="mn">Middle name</label>
+				</div>
+				<div class="second">
+					<input type="text" name="mn" id="mn" />
+				</div>
+			</div>
+			<div class="main">
+				<div class="first">
+					<label for="sn">Surname</label>
+				</div>
+				<div class="second">
+					<input type="text" name="sn" id="sn" />
+				</div>
+			</div>
+			<div class="main">
+				<div class="firstth">
+					<label id="sex">Sex</label>
+					<!-- if you added text and got more than one string in div with class "firstth", you have to change CSS rule -->					
+				</div>
+				<div class="secondth">
+					<div class="thirdth">
+						<input type="radio" name="sex" checked="checked" value='m' id="m" />
+						<label for="m">Male</label>
+						<!-- if you added text and got more than one string in div with class "thirdth", you have to change CSS rule -->
+					</div>
+					<div class="fourth">
+						<input type="radio" name="sex" value='f' id="f" />
+						<label for="f">Female</label>
+						<!-- if you added text and got more than one string in div with class "fourth", you have to change CSS rule -->
+					</div>
+				</div>
+			</div>
+			<div class="main">
+				<div class="first">
+					<label for="age" title="You must enter age from 18 to 101">Age</label>
+				</div>
+				<div class="second">
 					<input title="You must enter age from 18 to 101" type="text" name="age" 
-					id='age' pattern="[1][8-9]|[2-9][0-9]|100|101" placeholder="from 18 to 101"/><br />
+					id='age' pattern="[1][8-9]|[2-9][0-9]|100|101" placeholder="from 18 to 101"/>
+				</div>
+			</div>
+			<div class="main">
+				<div class="first">
+					<label for="cnt">Country</label><br />
+				</div>
+				<div class="second">
 					<select name="cnt" id="cnt" >
 						<option value="homeless">&nbsp;</option>
 						<option value="Russia">Russia</option>
@@ -47,59 +102,101 @@
 						<option value="France">France</option>
 						<option value="Germany">Germany</option>
 						<option value="Ital">Italy</option>
-					</select><br />
+					</select>
+				</div>
+			</div>
+			<div class="main">
+				<div class="first">
+					<label>City</label>
+				</div>
+				<div class="fifth">
 					<input type="checkbox" name="ct" id="ct1" value="Ryazan"/>
 					<label for="ct1">Ryazan</label>
 					<input type="checkbox" name="ct" id="ct2" value="Moscow"/>
-					<label for="ct2">Moscow</label><br />
+					<label for="ct2">Moscow</label>
+				</div>				
+			</div>
+			<div class="main">
+				<div class="first">
+					<label for="img">Photografy</label>
+				</div>
+				<div class="second">
 					<input type="file" name="img" id="img"/>
 				</div>
-			<div class="next">	
-			<hr />
-			<div class="field">
-			<label for="way" id="title">Title</label><br />
-			<label for="sl" id="salary">Salary</label><br />
-			</div>	
-			<div class="main">
-						<select name="way" id="way" size="8" multiple>
-				<optgroup label="Technologies">
-					<option value="Web master">Web master</option>
-					<option value="Database Administrator">Database Administrator</option>
-					<option value="Computer-aided design">Computer-aided design</option>
-				</optgroup>
-				<optgroup label="Finance">
-					<option value="Economic Planning">Economic Planning</option>
-					<option value="Management accounting">Management accounting</option>
-					<option value="Budgeting and planning">Budgeting and planning</option>
-				</optgroup>
-			</select><br />
-			<input type="range" name="sl" id="sl" min="0" max="100" value="50"/><br />				
 			</div>
-			<div class="next">				
-				<textarea name="text" id="text" cols="30" rows="10" placeholder="Tell us about yourself..."></textarea><br />		
-		</div>				
-		</div>
+			<hr />				
+				<div class="main">
+				<div class="firstt">
+					<label for="way" id="title">Title </label>
+					<!-- if you added text and got more than one string in div with class "firstt", you have to change CSS rule -->
+				</div>
+				<div class="secondt">
+					<select name="way" id="way" size="8" multiple>
+						<optgroup label="Technologies">
+							<option value="Web master">Web master</option>
+							<option value="Database Administrator">Database Administrator</option>
+							<option value="Computer-aided design">Computer-aided design</option>
+						</optgroup>
+						<optgroup label="Finance">
+							<option value="Economic Planning">Economic Planning</option>
+							<option value="Management accounting">Management accounting</option>
+							<option value="Budgeting and planning">Budgeting and planning</option>
+						</optgroup>						
+					</select>
+				</div>
+			</div>
+			<div class="mainq">
+				<div class="first">
+					<label for="sl" id="salary">Salary</label>
+				</div>
+				<div class="secondq">
+					<input type="range" name="sl" id="sl" min="0" max="100" value="50"/>
+				</div>
+			</div>
+			<div>	
+				<textarea name="text" id="text" cols="50" rows="10" placeholder="Tell us about yourself..."></textarea>
+			</div>					
 		</fieldset>
 		<fieldset>
-			<legend>Contact information</legend>
-				<div class="field">
-					<label for="st">Site</label><br />
-					<label for="em">Email</label><br />
-					<label for="phn">Phone</label>
-				</div>				
-					<div class="main">
-						<input type="url" name="st" id="st" /><br />						
-						<input type="email" name="em" id="em" /><br />						
-						<input type="tel" name="phn" id="phn" />	
-					</div>
-		</fieldset>			
-		<div id="pswd">
-			<label for="psw" >Password</label>
-			<input type="password" name="psw" id="psw"/><br />
+		<legend>Contact information</legend>
+			<div class="main">
+				<div class="first">
+					<label for="st">Site</label>
+				</div>
+				<div class="second">
+					<input type="url" name="st" id="st" />
+				</div>
+			</div>
+			<div class="main">
+				<div class="first">
+					<label for="em">Email</label>
+				</div>
+				<div class="second">
+					<input type="email" name="em" id="em" />
+				</div>
+			</div>
+			<div class="main">
+				<div class="first">
+						<label for="phn">Phone</label>
+				</div>
+				<div class="second">
+					<input type="tel" name="phn" id="phn" />
+				</div>
+			</div>
+		</fieldset>
+		<div id="cap">		
+			<div class="main">
+				<div class="first">
+					<label for="psw" >Password</label>
+				</div>
+				<div class="second">
+					<input type="password" name="psw" id="psw"/>
+				</div>
+			</div>
+		</div>
 			<hr />
 			<input type="submit" value="Отправить">		
-			<input type="reset" value="Сбросить">
-		</div>	
+			<input type="reset" value="Сбросить">			
 	</form>
 </body>
 </html>
