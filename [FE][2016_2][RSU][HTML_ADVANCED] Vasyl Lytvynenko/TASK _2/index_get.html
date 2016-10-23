@@ -4,53 +4,96 @@
 	<meta charset="UTF-8">
 	<title>Second task(get)</title>
 	<style type="text/css">
-	form{line-height:25px;}
-	#sb{margin-top:10px;}
-	fieldset{width:300px;}
-	.field {clear:both; text-align:right;}
-	div .field label {float:left; padding-right:10px;}
-	.main {float:left}
-	#next{clear:both;}
-	#lb{float:left;line-height:50px; margin-right:3em;;}
+	.main{clear:both; overflow:auto; position:relative; min-height:1.5em;}
+	.first{width:6em;min-height:1.5em;}
+	.first>*{vertical-align:middle;}
+	.second{margin-left:6em;}
+	.second>*{position: absolute;top: 50%;margin-top: -0.75em;}
+	
+	.firstth{width:6em;min-height:3em;overflow:auto; }
+		
+	.firstth>*{position: absolute;top: 50%;margin-top: -0.75em;width:6em;overflow:auto;}
+	/*if you added text and got more than one string in div with class "firstth>*", you have to comment out this rule*/
+	
+	.secondth{margin-left:6em;overflow:auto;}
+	.thirdth{position: absolute;top: 25%;margin-top: -0.75em;min-width:6em;}
+	/*if you added text and got more than one string in div with class "thirdth", you have to added 1.5em to min-height for each string in "firstth" rule*/
+	
+	.fourth{position: absolute;bottom: 25%;margin-bottom: -0.75em;min-width:6em	}
+	/*if you added text and got more than one string in div with class "fourth", you have to added 1.5em to min-height for each string in "firstth" rule*/
+	#cap{margin-top:0.5em;margin-left:1em;}
 	</style>
 </head>
 <body>
-	<h1>Registration form</h1>
-	<form action="http://httpbin.org/get" method="get">
+	<h1>The Form</h1>
+	<form action="http://httpbin.org/get">
 		<fieldset>
 			<legend>Personal data</legend>
-				<div class="main">
-					<div class="field">
-						<label for="sn">Surname</label>
-						<input type="text" name="sn" id="sn" /><br />
-						<label for="fn">First name</label>
-						<input type="text" name="fn" id="fn" /><br />
+			<div class="main">
+				<div class="first">
+					<label for="fn">First name</label>
+				</div>
+				<div class="second">
+					<input  type="text" name="fn" id="fn" />
+				</div>
+			</div>
+			<div class="main">
+				<div class="first">
+					<label for="sn">Surname</label>
+				</div>
+				<div class="second">
+					<input type="text" name="sn" id="sn" />
+				</div>
+			</div>
+			<div class="main">
+				<div class="firstth">
+					<label id="sex">Sex</label>
+					<!-- if you added text and got more than one string in div with class "firstth", you have to change CSS rule -->					
+				</div>
+				<div class="secondth">
+					<div class="thirdth">
+						<input type="radio" name="sex" checked="checked" value='m' id="m" />
+						<label for="m">Male</label>
+						<!-- if you added text and got more than one string in div with class "thirdth", you have to change CSS rule -->
+					</div>
+					<div class="fourth">
+						<input type="radio" name="sex" value='f' id="f" />
+						<label for="f">Female</label>
+						<!-- if you added text and got more than one string in div with class "fourth", you have to change CSS rule -->
 					</div>
 				</div>
-				<div id="next">
-					<div id="lb">
-						<label>Sex</label>
-					</div>
-						<input type="radio" name="sex" checked="checked" value='m' id="m" />
-						<label for="m">Male</label> <br />
-						<input type="radio" name="sex" value='f' id="f" />
-						<label for="f">Female</label><br />
-				</div>	
+			</div>			
 		</fieldset>
 		<fieldset>
-			<legend>Contact information</legend>
-				<div class="main">
-					<div class="field">
-						<label for="st">Site</label>
-						<input type="url" name="st" id="st" /><br />
-						<label for="em">Email</label>
-						<input type="email" name="em" id="em" /><br />
-						<label for="phn">Phone</label>
-						<input type="tel" name="phn" id="phn" />	
-					</div>
+		<legend>Contact information</legend>
+			<div class="main">
+				<div class="first">
+					<label for="st">Site</label>
 				</div>
-		</fieldset>					
-		<input type="submit" id="sb" value="Отправить">		
+				<div class="second">
+					<input type="url" name="st" id="st" />
+				</div>
+			</div>
+			<div class="main">
+				<div class="first">
+					<label for="em">Email</label>
+				</div>
+				<div class="second">
+					<input type="email" name="em" id="em" />
+				</div>
+			</div>
+			<div class="main">
+				<div class="first">
+						<label for="phn">Phone</label>
+				</div>
+				<div class="second">
+					<input type="tel" name="phn" id="phn" />
+				</div>
+			</div>
+		</fieldset>
+		<div id="cap">
+			<input type="submit" value="Отправить">
+		</div>
 	</form>
 </body>
 </html>
