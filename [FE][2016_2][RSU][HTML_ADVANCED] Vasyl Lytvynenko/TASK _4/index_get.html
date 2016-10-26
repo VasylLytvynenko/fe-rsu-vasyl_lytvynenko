@@ -4,96 +4,70 @@
 	<meta charset="UTF-8">
 	<title>Fourth task(get)</title>
 	<style type="text/css">
-	.main{clear:both; overflow:auto; position:relative; min-height:1.5em;}
-	.first{width:6em;min-height:1.5em;}
-	.first>*{vertical-align:middle;}
-	.second{margin-left:6em;}
-	.second>*{position: absolute;top: 50%;margin-top: -0.75em;}
-	
-	.firstth{width:6em;min-height:3em;overflow:auto; }
-		
-	.firstth>*{position: absolute;top: 50%;margin-top: -0.75em;width:6em;overflow:auto;}
-	/*if you added text and got more than one string in div with class "firstth>*", you have to comment out this rule*/
-	
-	.secondth{margin-left:6em;overflow:auto;}
-	.thirdth{position: absolute;top: 25%;margin-top: -0.75em;min-width:6em;}
-	/*if you added text and got more than one string in div with class "thirdth", you have to added 1.5em to min-height for each string in "firstth" rule*/
-	
-	.fourth{position: absolute;bottom: 25%;margin-bottom: -0.75em;min-width:6em	}
-	/*if you added text and got more than one string in div with class "fourth", you have to added 1.5em to min-height for each string in "firstth" rule*/
-	
-	.fifth{margin-left:6em;position: absolute;top: 50%;margin-top: -0.75em;min-width:10em}	
-	
-	.secondt{margin-left:6em;}
-	.firstt>*{position: absolute;top: 50%;margin-top: -0.75em;width:6em;}
-		/*if you added text and got more than one string in div with class "firstt", you have to added 1em to margin-top for each string in "firstt" rule*/
-	.mainq{clear:both; overflow:auto; position:relative; min-height:2em;}		
-	.secondq{margin-left:6em;}
-	.secondq>*{position: absolute;top: 50%;margin-top: -1em;}
-	#cap{margin-top:0.5em;margin-left:1em;}
+	form{line-height:25px;}
+	table.form{border:0;width:100%;text-align:left;}
+	.formt{margin-left:16px;}
+	.fir{width:20vw;}
 	</style>
 </head>
 <body>
 	<h1>The Form</h1>
 	<form action="http://httpbin.org/get">
 		<fieldset>
-			<legend>Personal data</legend>
-			<div class="main">
-				<div class="first">
-					<label for="fn">First name</label>
-				</div>
-				<div class="second">
+		<legend>Personal data</legend>
+		<table class="form">
+			<tr>
+				<td class="fir">
+					<label for="fn">First Name</label>
+				</td>
+				<td>
 					<input  type="text" name="fn" id="fn" />
-				</div>
-			</div>
-			<div class="main">
-				<div class="first">
+				</td>
+			</tr>
+			<tr>
+				<td>
 					<label for="mn">Middle name</label>
-				</div>
-				<div class="second">
+				</td>
+				<td>
 					<input type="text" name="mn" id="mn" />
-				</div>
-			</div>
-			<div class="main">
-				<div class="first">
-					<label for="sn">Surname</label>
-				</div>
-				<div class="second">
-					<input type="text" name="sn" id="sn" />
-				</div>
-			</div>
-			<div class="main">
-				<div class="firstth">
-					<label id="sex">Sex</label>
-					<!-- if you added text and got more than one string in div with class "firstth", you have to change CSS rule -->					
-				</div>
-				<div class="secondth">
-					<div class="thirdth">
-						<input type="radio" name="sex" checked="checked" value='m' id="m" />
-						<label for="m">Male</label>
-						<!-- if you added text and got more than one string in div with class "thirdth", you have to change CSS rule -->
-					</div>
-					<div class="fourth">
-						<input type="radio" name="sex" value='f' id="f" />
-						<label for="f">Female</label>
-						<!-- if you added text and got more than one string in div with class "fourth", you have to change CSS rule -->
-					</div>
-				</div>
-			</div>
-			<div class="main">
-				<div class="first">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="sn">Surname name</label>			
+				</td>
+				<td>
+					<input type="text" name="sn" id="sn" />			
+				</td>
+			</tr>
+			<tr>
+				<td rowspan="2">
+					<label id="sex">Sex</label>				
+				</td>
+				<td>
+					<input type="radio" name="sex" checked="checked" value='m' id="m" />
+					<label for="m">Male</label>					
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="radio" name="sex" value='f' id="f" />
+					<label for="f">Female</label>					
+				</td>
+			</tr>
+			<tr>
+				<td>
 					<label for="age" title="You must enter age from 18 to 101">Age</label>
-				</div>
-				<div class="second">
-					<input title="You must enter age from 18 to 101" type="text" name="age" 
-					id='age' pattern="[1][8-9]|[2-9][0-9]|100|101" placeholder="from 18 to 101"/>
-				</div>
-			</div>
-			<div class="main">
-				<div class="first">
-					<label for="cnt">Country</label><br />
-				</div>
-				<div class="second">
+				</td>
+				<td>
+					<input title="You must enter age from 18 to 101" type="text" name="age" id='age' pattern="[1][8-9]|[2-9][0-9]|100|101" placeholder="from 18 to 101"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="cnt">Country</label>
+				</td>
+				<td>
 					<select name="cnt" id="cnt" >
 						<option value="homeless">&nbsp;</option>
 						<option value="Russia">Russia</option>
@@ -103,34 +77,37 @@
 						<option value="Germany">Germany</option>
 						<option value="Ital">Italy</option>
 					</select>
-				</div>
-			</div>
-			<div class="main">
-				<div class="first">
+				</td>
+			</tr>
+			<tr>
+				<td>
 					<label>City</label>
-				</div>
-				<div class="fifth">
+				</td>
+				<td>
 					<input type="checkbox" name="ct" id="ct1" value="Ryazan"/>
 					<label for="ct1">Ryazan</label>
 					<input type="checkbox" name="ct" id="ct2" value="Moscow"/>
 					<label for="ct2">Moscow</label>
-				</div>				
-			</div>
-			<div class="main">
-				<div class="first">
+				</td>
+			</tr>
+			<tr>
+				<td>
 					<label for="img">Photografy</label>
-				</div>
-				<div class="second">
+				</td>
+				<td>
 					<input type="file" name="img" id="img"/>
-				</div>
-			</div>
-			<hr />				
-				<div class="main">
-				<div class="firstt">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<hr />
+				</td>
+			</tr>
+			<tr>
+				<td>
 					<label for="way" id="title">Title </label>
-					<!-- if you added text and got more than one string in div with class "firstt", you have to change CSS rule -->
-				</div>
-				<div class="secondt">
+				</td>
+				<td>
 					<select name="way" id="way" size="8" multiple>
 						<optgroup label="Technologies">
 							<option value="Web master">Web master</option>
@@ -143,60 +120,71 @@
 							<option value="Budgeting and planning">Budgeting and planning</option>
 						</optgroup>						
 					</select>
-				</div>
-			</div>
-			<div class="mainq">
-				<div class="first">
+				</td>
+			</tr>
+			<tr>
+				<td>
 					<label for="sl" id="salary">Salary</label>
-				</div>
-				<div class="secondq">
-					<input type="range" name="sl" id="sl" min="0" max="100" value="50"/>
-				</div>
-			</div>
-			<div>	
-				<textarea name="text" id="text" cols="50" rows="10" placeholder="Tell us about yourself..."></textarea>
-			</div>					
+				</td>
+				<td>
+				<input type="range" name="sl" id="sl" min="0" max="100" value="50"/>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<textarea name="text" id="text" cols="50" rows="10" placeholder="Tell us about yourself..."></textarea>
+				</td>
+			</tr>
+		</table>	
 		</fieldset>
 		<fieldset>
 		<legend>Contact information</legend>
-			<div class="main">
-				<div class="first">
+		<table class="form">
+			<tr>
+				<td class="fir">
 					<label for="st">Site</label>
-				</div>
-				<div class="second">
+				</td>
+				<td>
 					<input type="url" name="st" id="st" />
-				</div>
-			</div>
-			<div class="main">
-				<div class="first">
-					<label for="em">Email</label>
-				</div>
-				<div class="second">
+				</td>
+			</tr>
+			<tr>
+				<td>
+						<label for="em">E-mail</label>
+				</td>
+				<td>
 					<input type="email" name="em" id="em" />
-				</div>
-			</div>
-			<div class="main">
-				<div class="first">
-						<label for="phn">Phone</label>
-				</div>
-				<div class="second">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="phn">Phone</label>
+				</td>
+				<td>
 					<input type="tel" name="phn" id="phn" />
-				</div>
-			</div>
-		</fieldset>
-		<div id="cap">		
-			<div class="main">
-				<div class="first">
+				</td>
+			</tr>
+		</table>
+	</fieldset>
+		<table class="form formt">
+			<tr>
+				<td class="fir">
 					<label for="psw" >Password</label>
-				</div>
-				<div class="second">
+				</td>
+				<td>
 					<input type="password" name="psw" id="psw"/>
-				</div>
-			</div>
-		</div>
-			<hr />
-			<input type="submit" value="Отправить">		
-			<input type="reset" value="Сбросить">			
+				</td>
+			</tr>
+		</table>
+		<hr />
+		<table class="form formt">
+			<tr>
+				<td class="fir">
+					<input type="submit" value="Отправить">
+					<input type="reset" value="Сбросить">
+				</td>
+			</tr>
+		</table>
 	</form>
 </body>
 </html>
