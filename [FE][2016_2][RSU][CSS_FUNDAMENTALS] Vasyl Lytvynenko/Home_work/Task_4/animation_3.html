@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Fourth task</title>
+	<style type="text/css">
+body {
+	margin:0;padding:0;border:0;background:gainsboro;
+}
+p{position: absolute;	top:50%;margin-top:-0.5em;margin-left:-1em;color:#fff;font-size:2em;
+	left:50%;
+}
+#circ {
+	top:50%;
+	margin-top:-75px;
+	margin-left:-100px;
+	left:50%;
+  width: 150px;
+  height: 150px;
+  background:green;
+  animation-name: myRotate;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-direction: alternate-reverse;
+  position: absolute;
+}
+
+@keyframes myRotate {
+  0% { 
+    border-radius: 0;
+		background:red;
+		transform: skew(0deg, 0deg);	
+		
+  }
+  
+  50%  { 
+    height: 100px;		 
+		background:red;
+		transform: skew(45deg, 45deg);	
+  }
+	  75%  { 
+    height: 100px;
+		background:green;
+		transform: skew(0deg, 0deg);	
+  }
+
+  100%  { 
+    transform: rotate(360deg);
+    border-radius: 100%;
+    width: 200px;
+    height: 100px;
+  }
+}
+	</style>
+</head>
+<body>
+    <div id="circ"><p>Hello</p></div>
+</body>
+</html>
