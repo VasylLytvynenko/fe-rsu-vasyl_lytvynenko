@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Javascript basics</title>
+	<style type="text/css">
+	#fstfig, #sndfig{
+		width:250px;
+		}
+	#fstsid, #sndsid, #trthsid, #match, #fact{width:190px;}
+	.arr{width:100px;}
+	</style>
+</head>
+<body>
+	<h4>Let's to declare two variables and show them</h4>
+		<input type='text' id='fstfig' placeholder="Enter here to display it in console" />
+		<input type='text' id='sndfig' placeholder="Enter here to display it in document lower" />
+		<input type="button" onclick="show_var()" value="Push here"/>
+		<div id="addb"></div>
+	<h4>Let's to calculate triangle's area by the length of the sides</h4>
+		<input type='text' id='fstsid' placeholder="Enter 1-st length of the triangle" />
+		<input type='text' id='sndsid' placeholder="Enter 2-nd length of the triangle" />
+		<input type='text' id='trthsid' placeholder="Enter 3-th length of the triangle" />
+		<input type="button" onclick="area()" value="Push here"/>
+		<div id="addarr">	</div>
+	<h4>Let's to reverse the given array using three kind of loops</h4>
+		<h5>In first we will use loop "for":</h5>
+			<input type='text' class="arr" id='fstarr1' value="казнить " />
+			<input type='text' class="arr" id='sndarr1' value="нельзя, " />
+			<input type='text' class="arr" id='trtharr1' value="помиловать " />
+			<input type="button" onclick="array()" value="Push here"/>
+			<div id="addarray"></div>
+		<h5>In second we will use loop "while":</h5>
+			<input type='text' class="arr" id='fstarr2' value="конец " />
+			<input type='text' class="arr" id='sndarr2' value="- делу " />
+			<input type='text' class="arr" id='trtharr2' value="венец " />
+			<input type="button" onclick="array2()" value="Push here"/>
+			<div id="addarray2"></div>
+		<h5>In third we will use loop "do while":</h5>
+			<input type='text' class="arr" id='fstarr3' value="мал " />
+			<input type='text' class="arr" id='sndarr3' value="золотник да " />
+			<input type='text' class="arr" id='trtharr3' value="дорог " />
+			<input type="button" onclick="array3()" value="Push here"/>
+			<div id="addarray3"></div>
+	<h4>Let's try to explain the difference between ++i and i++ with example <a href="https://learn.javascript.ru/operators#инкремент-декремент" target="_blank">Push here</a></h4>
+	<h4>Let's try to write a function that checks if the given arguments is positive number or negative number or is 0 <input type='text' id='match' placeholder="Enter here a number" /><input type="button" onclick="match()" value="Push here"/></h4>
+		<div id="addmatch"></div>
+	<h4>Let's try to create a request that asks the user his name and alert it back <input type="button" onclick="req()" value="Push here"/></h4>
+	<h4>Let's try to write a function that calculates factorial <input type='text' id='fact' placeholder="Enter here a number" /><input type="button" onclick="fact()" value="Push here"/></h4>
+		<div id="addfact"></div>
+  <script language="javascript" type="text/javascript" src="script.js"></script>
+</body>
+</html>
