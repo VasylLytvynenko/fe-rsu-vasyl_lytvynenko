@@ -1,0 +1,522 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Layouts</title>
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css"/>
+<link rel="stylesheet" href="style_page.css" type="text/css"/>
+</head>
+<body>
+	<div class="main">
+		<div class="head">	
+			<div class="head_fst">
+				<div class="head_fst_fst">
+					Help Center
+				</div>
+				<div class="head_fst_snd">
+					<i class="fa fa-circle" aria-hidden="true"></i>
+				</div>
+				<div class="head_fst_thr">
+					Our Support
+				</div>			
+			</div>		
+			<div class="head_snd">
+				<div class="head_snd_fst">
+					<img src="img/avatar.png" alt="Smiling man" />
+				</div>
+				<div class="head_snd_snd">
+					John Doe
+				</div>
+				<div class="head_snd_thr">
+					<i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
+				</div>
+			</div>		
+		</div>
+		<div class="body">
+			<div class="body_nav">
+				<div class="body_nav_fst">
+					<div class="body_nav_fst_button">
+						<span class="body_nav_fst_button_fst">
+							<i class="fa fa-plus" aria-hidden="true">
+							</i>
+						</span>
+					 <span class="body_nav_fst_button_snd">ADD A BOOK</span>
+					</div>	
+				</div>
+				<div class="body_nav_snd">
+					<div class="body_nav_snd_menu">
+						<span>
+							<i class="fa fa-book" aria-hidden="true"></i>
+						</span>						
+						<span>
+							Now Reading
+						</span>
+					</div>
+					<div class="body_nav_snd_menu">									
+						<span>
+							<i class="fa fa-globe" aria-hidden="true"></i>
+						</span>
+						<span>
+							Browse
+						</span>
+					</div>
+					<div class="body_nav_snd_menu">									
+						<span>
+							<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+						</span>
+						<span>
+							Buy Books
+						</span>
+					</div>
+					<div class="body_nav_snd_menu">									
+						<span>
+							<i class="fa fa-star" aria-hidden="true"></i>
+						</span>
+						<span>
+							Favourite Books
+						</span>
+					</div>
+					<div class="body_nav_snd_menu">									
+						<span>
+							<i class="fa fa-th-list" aria-hidden="true"></i>
+						</span>							
+						<span>
+							Whishlist
+						</span>
+					</div>
+					<div class="body_nav_snd_menu">									
+						<span>
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+						</span>											
+						<span>
+							History
+						</span>
+					</div>
+				</div>
+				<div class="body_nav_thr">
+					<div class="body_nav_thr_menu">
+						<span>
+							<i class="fa fa-circle" aria-hidden="true"></i>
+						</span>
+						<span>
+							Must Read Titles
+						</span>
+					</div>				
+					<div class="body_nav_thr_menu">
+						<span>
+							<i class="fa fa-circle" aria-hidden="true"></i>
+						</span>
+						<span>
+							Best Of List
+						</span>
+					</div>				
+					<div class="body_nav_thr_menu">
+						<span>
+							<i class="fa fa-circle" aria-hidden="true"></i>
+						</span>
+						<span>
+							Classic Novels
+						</span>
+					</div>				
+					<div class="body_nav_thr_menu">
+						<span>
+							<i class="fa fa-circle" aria-hidden="true"></i>
+						</span>
+						<span>
+							Non Fiction
+						</span>
+					</div>				
+				</div>
+				<div class="body_nav_frth">
+
+				
+					<div class="body_nav_frth_reminder">
+						<div  class="body_nav_frth_reminder_icon">
+							<span>
+								<i class="fa fa-clock-o" aria-hidden="true"></i>
+							</span>	
+						</div>
+						<div class="body_nav_frth_reminder_contain">
+							<div  class="body_nav_frth_reminder_text">
+								<span>You added</span>
+								<span class="book_params">Fight club</span>
+								<span>by</span>
+								<span class="book_params">Chuck Palahniuk</span>
+								<span>to your</span>
+								<span class="book_params">Must Read Titles</span>
+								<span>.</span>
+							</div>
+							<div class="time_left">
+								<span>24 minutes ago</span>								
+							</div>
+						</div>						
+					</div>	
+
+					<div class="body_nav_frth_reminder">
+						<div  class="body_nav_frth_reminder_icon">
+							<span>
+								<i class="fa fa-clock-o" aria-hidden="true"></i>
+							</span>	
+						</div>
+						<div class="body_nav_frth_reminder_contain">
+							<div  class="body_nav_frth_reminder_text">
+								<span>You added</span>
+								<span class="book_params">The Trial</span>
+								<span>by</span>
+								<span class="book_params">Franz Kafka</span>
+								<span>to your</span>
+								<span class="book_params">Must Read Titles</span>
+								<span>.</span>
+							</div>
+							<div class="time_left">
+								<span>48 minutes ago</span>								
+							</div>
+						</div>						
+					</div>	
+
+					
+				</div>
+			</div>
+			<div class="body_main">
+				<div class="body_main_fst">
+					<div class="body_main_fst_txt">
+					Browse Available Books
+					</div>
+				</div>
+				<div class="body_main_snd">
+					<div class="body_main_snd_radio">
+						<input type="radio" id="fst_radio" name="menu" value="allBooks" checked="checked">
+						<label class="body_main_menu" for="fst_radio">All Books</label>			
+						<input type="radio" id="snd_radio" name="menu" value="mostRecent">
+						<label class="body_main_menu" for="snd_radio">Most Recent</label>			
+						<input type="radio" id="thr_radio" name="menu" value="MmstPopular">
+						<label class="body_main_menu" for="thr_radio">Most Popular</label>		
+						<input type="radio" id="frth_radio" name="menu" value="free ooks">
+						<label class="body_main_menu" for="frth_radio">Free Books</label> 			
+					</div>
+					<div class="body_main_snd_search">
+						<div class="body_main_snd_search_input">
+							<input type="search" class="body_main_search" id="search" name="search"  placeholder="Enter keywords"/>				
+							<span class="body_main_snd_search_loop">
+								<i class="fa fa-search"></i>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="body_main_thr">				
+					<div class="body_main_thr_content">
+						<div class="body_main_thr_border">
+							<div class="body_main_thr_img">
+								<img src="img/cover_1.png" alt="Jewels of Nizam" />
+							</div>
+							<div class="body_main_thr_title">
+								Jewels of Nizam
+							</div>
+							<div class="body_main_thr_autore">
+								by Geeta Devi
+							</div>
+							<div class="body_main_thr_stars">
+								<span class="full_star">
+									<i class="fa fa-star" aria-hidden="true"></i>
+								</span>								
+								<span class="full_star">
+									<i class="fa fa-star" aria-hidden="true"></i>
+								</span>								
+								<span class="full_star">
+									<i class="fa fa-star" aria-hidden="true"></i>
+								</span>								
+								<span class="full_star">
+									<i class="fa fa-star" aria-hidden="true"></i>
+								</span>								
+								<span class="full_star">
+									<i class="fa fa-star" aria-hidden="true"></i>
+								</span>								
+							</div>
+						</div>						
+					</div>			
+					<div class="body_main_thr_content">
+						<div class="body_main_thr_border">
+							<div class="body_main_thr_img">
+								<img src="img/cover_2.png" alt="Cakes & Bakes" />
+							</div>
+							<div class="body_main_thr_title">
+								Cakes & Bakes
+							</div>
+							<div class="body_main_thr_autore">
+								by Sanjeev Kapoor
+							</div>
+							<div class="body_main_thr_stars">							
+								<span class="full_star">
+									<i class="fa fa-star" aria-hidden="true"></i>
+								</span>								
+								<span class="full_star">
+									<i class="fa fa-star" aria-hidden="true"></i>
+								</span>								
+								<span class="full_star">
+									<i class="fa fa-star" aria-hidden="true"></i>
+								</span>								
+								<span class="full_star">
+									<i class="fa fa-star" aria-hidden="true"></i>
+								</span>								
+								<span class="full_star">
+									<i class="fa fa-star" aria-hidden="true"></i>
+								</span>								
+							</div>
+						</div>						
+					</div>								
+					<div class="body_main_thr_content">
+						<div class="body_main_thr_border">
+							<div class="body_main_thr_img">
+								<img src="img/cover_3.png" alt="Jamie's Kitchen" />
+							</div>
+							<div class="body_main_thr_title">
+								Jamie's Kitchen
+							</div>
+							<div class="body_main_thr_autore">
+								by Jamie Oliver
+							</div>
+							<div class="body_main_thr_stars">
+								<span class="full_star">
+									<i class="fa fa-star" aria-hidden="true"></i>
+								</span>								
+								<span class="full_star">
+									<i class="fa fa-star" aria-hidden="true"></i>
+								</span>								
+								<span class="full_star">
+									<i class="fa fa-star" aria-hidden="true"></i>
+								</span>								
+								<span class="full_star">
+									<i class="fa fa-star" aria-hidden="true"></i>
+								</span>								
+								<span class="half_star">
+									<i class="fa fa-star-half-o" aria-hidden="true"></i>
+								</span>	
+							</div>
+						</div>						
+					</div>			
+					<div class="body_main_thr_content">
+						<div class="body_main_thr_border">
+							<div class="body_main_thr_img">
+								<img src="img/cover_4.png" alt="Inexpensive Family Meals" />
+							</div>
+							<div class="body_main_thr_title">
+								Inexpensive Family Meals
+							</div>
+							<div class="body_main_thr_autore">
+								by Simon Holst
+							</div>
+							<div class="body_main_thr_stars">
+								<span class="full_star">
+									<i class="fa fa-star" aria-hidden="true"></i>
+								</span>								
+								<span class="full_star">
+									<i class="fa fa-star" aria-hidden="true"></i>
+								</span>								
+								<span class="full_star">
+									<i class="fa fa-star" aria-hidden="true"></i>
+								</span>								
+								<span class="full_star">
+									<i class="fa fa-star" aria-hidden="true"></i>
+								</span>								
+								<span class="empty_star">
+									<i class="fa fa-star-o" aria-hidden="true"></i>
+								</span>	
+							</div>
+						</div>						
+					</div>		
+					<div class="body_main_thr_content">
+						<div class="body_main_thr_border">
+							<div class="body_main_thr_img">
+								<img src="img/cover_5.png" alt="Paleo Slow Cooking" />
+							</div>
+							<div class="body_main_thr_title">
+								Paleo Slow Cooking
+							</div>
+							<div class="body_main_thr_autore">
+								by Chrissy Gower
+							</div>
+							<div class="body_main_thr_stars">
+								<span class="full_star">
+									<i class="fa fa-star" aria-hidden="true"></i>
+								</span>								
+								<span class="full_star">
+									<i class="fa fa-star" aria-hidden="true"></i>
+								</span>								
+								<span class="full_star">
+									<i class="fa fa-star" aria-hidden="true"></i>
+								</span>								
+								<span class="full_star">
+									<i class="fa fa-star" aria-hidden="true"></i>
+								</span>								
+								<span class="half_star">
+									<i class="fa fa-star-half-o" aria-hidden="true"></i>
+								</span>	
+							</div>
+						</div>						
+					</div>			
+					<div class="body_main_thr_content">
+						<div class="body_main_thr_border">
+							<div class="body_main_thr_img">
+								<img src="img/cover_6.png" alt="Cook Like an Italian" />
+							</div>
+							<div class="body_main_thr_title">
+								Cook Like an Italian
+							</div>
+							<div class="body_main_thr_autore">
+								by Tobi Puttock
+							</div>
+							<div class="body_main_thr_stars">
+								<span class="full_star">
+									<i class="fa fa-star" aria-hidden="true"></i>
+								</span>								
+								<span class="full_star">
+									<i class="fa fa-star" aria-hidden="true"></i>
+								</span>								
+								<span class="full_star">
+									<i class="fa fa-star" aria-hidden="true"></i>
+								</span>								
+								<span class="full_star">
+									<i class="fa fa-star" aria-hidden="true"></i>
+								</span>								
+								<span class="empty_star">
+									<i class="fa fa-star-o" aria-hidden="true"></i>
+								</span>	
+							</div>
+						</div>						
+					</div>				
+					<div class="body_main_thr_content">
+						<div class="body_main_thr_border">
+							<div class="body_main_thr_img">
+								<img src="img/cover_7.png" alt="Suneeta Vaswani" />
+							</div>
+							<div class="body_main_thr_title">
+								Suneeta Vaswani
+							</div>
+							<div class="body_main_thr_autore">
+								by Geeta Devi
+							</div>
+							<div class="body_main_thr_stars">
+								<span class="full_star">
+									<i class="fa fa-star" aria-hidden="true"></i>
+								</span>								
+								<span class="full_star">
+									<i class="fa fa-star" aria-hidden="true"></i>
+								</span>								
+								<span class="full_star">
+									<i class="fa fa-star" aria-hidden="true"></i>
+								</span>								
+								<span class="full_star">
+									<i class="fa fa-star" aria-hidden="true"></i>
+								</span>								
+								<span class="full_star">
+									<i class="fa fa-star" aria-hidden="true"></i>
+								</span>		
+							</div>
+						</div>						
+					</div>					
+					<div class="body_main_thr_content">
+						<div class="body_main_thr_border">
+							<div class="body_main_thr_img">
+								<img src="img/cover_8.png" alt="Jamie Does" />
+							</div>
+							<div class="body_main_thr_title">
+								Jamie Does
+							</div>
+							<div class="body_main_thr_autore">
+								by Jamie Oliver
+							</div>
+							<div class="body_main_thr_stars">
+								<span class="full_star">
+									<i class="fa fa-star" aria-hidden="true"></i>
+								</span>								
+								<span class="full_star">
+									<i class="fa fa-star" aria-hidden="true"></i>
+								</span>								
+								<span class="full_star">
+									<i class="fa fa-star" aria-hidden="true"></i>
+								</span>								
+								<span class="full_star">
+									<i class="fa fa-star" aria-hidden="true"></i>
+								</span>								
+								<span class="empty_star">
+									<i class="fa fa-star-o" aria-hidden="true"></i>
+								</span>	
+							</div>
+						</div>						
+					</div>			
+					<div class="body_main_thr_content">
+						<div class="body_main_thr_border">
+							<div class="body_main_thr_img">
+								<img src="img/cover_9.png" alt="Jamie's italy" />
+							</div>
+							<div class="body_main_thr_title">
+								Jamie's italy
+							</div>
+							<div class="body_main_thr_autore">
+								by Jamie Oliver
+							</div>
+							<div class="body_main_thr_stars">
+								<span class="full_star">
+									<i class="fa fa-star" aria-hidden="true"></i>
+								</span>								
+								<span class="full_star">
+									<i class="fa fa-star" aria-hidden="true"></i>
+								</span>								
+								<span class="full_star">
+									<i class="fa fa-star" aria-hidden="true"></i>
+								</span>								
+								<span class="full_star">
+									<i class="fa fa-star" aria-hidden="true"></i>
+								</span>								
+								<span class="full_star">
+									<i class="fa fa-star" aria-hidden="true"></i>
+								</span>	
+							</div>
+						</div>						
+					</div>			
+					<div class="body_main_thr_content">
+						<div class="body_main_thr_border">
+							<div class="body_main_thr_img">
+								<img src="img/cover_10.png" alt="Vegetables Cookbook" />
+							</div>
+							<div class="body_main_thr_title">
+								Vegetables Cookbook
+							</div>
+							<div class="body_main_thr_autore">
+								by Matthew Biggs
+							</div>
+							<div class="body_main_thr_stars">
+								<span class="full_star">
+									<i class="fa fa-star" aria-hidden="true"></i>
+								</span>								
+								<span class="full_star">
+									<i class="fa fa-star" aria-hidden="true"></i>
+								</span>								
+								<span class="full_star">
+									<i class="fa fa-star" aria-hidden="true"></i>
+								</span>								
+								<span class="half_star">
+									<i class="fa fa-star-half-o" aria-hidden="true"></i>
+								</span>							
+								<span class="empty_star">
+									<i class="fa fa-star-o" aria-hidden="true"></i>
+								</span>	
+							</div>
+						</div>						
+					</div>					
+				</div>
+			</div>
+		</div>
+		<div class="foot">
+			<div class="foot_fst">
+				<div>
+					<i class="fa fa-question-circle" aria-hidden="true"></i>
+				</div>
+			</div>		
+			<div class="foot_snd">
+					<i class="fa fa-cog" aria-hidden="true"></i>
+			</div>		
+		</div>
+	</div>
+</body>
+</html>
